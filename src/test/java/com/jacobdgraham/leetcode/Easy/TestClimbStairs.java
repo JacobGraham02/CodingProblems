@@ -1,5 +1,6 @@
 package com.jacobdgraham.leetcode.Easy;
 
+import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -36,5 +37,10 @@ public class TestClimbStairs {
         int testNum = 20064;
         int climbStairsResult = climbStairsInstance.climbStairs(testNum);
         assertNotEquals(0, climbStairsResult);
+    }
+
+    @AfterAll
+    void tearDown() {
+        climbStairsInstance = null;
     }
 }
