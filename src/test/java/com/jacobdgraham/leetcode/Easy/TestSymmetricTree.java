@@ -31,8 +31,10 @@ public class TestSymmetricTree {
 
     @Test
     void testNoSymmetryOnTree() {
-        SymmetricTree.TreeNode treeNode = new SymmetricTree.TreeNode(1, new SymmetricTree.TreeNode(3),
-                new SymmetricTree.TreeNode(-1));
+        SymmetricTree.TreeNode treeNode = new SymmetricTree.TreeNode(1);
+        treeNode.left = new SymmetricTree.TreeNode(2);
+        treeNode.left.left = new SymmetricTree.TreeNode(3);
+        treeNode.right = new SymmetricTree.TreeNode(77);
         boolean expected_answer = symmetricTree.isSymmetric(treeNode);
         assertFalse(expected_answer);
     }
